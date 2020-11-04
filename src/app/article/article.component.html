@@ -1,0 +1,33 @@
+<mat-card class="card">
+  <div class="container">
+    <div class="votes" style="background-color: lightgrey">
+      <div class="statistic">
+        <div class="value">
+          {{votes}}10
+        </div>
+        <div class="label">
+          Points
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <a class="largeheader" href="{{link}}">
+        {{title}}
+      </a>
+      <ul class="voters">
+        <li class="item">
+          <a href click="voteup()">
+            <i class="arrow-up"></i>
+            J'aime
+          </a>
+        </li>
+        <li class="item">
+          <a href click="votedown()">
+            <i class="arrow-up"></i>
+            Je n'aime pas
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</mat-card>

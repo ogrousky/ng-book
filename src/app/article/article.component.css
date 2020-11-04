@@ -1,0 +1,32 @@
+.card {
+  max-width: 800px;
+}
+.votes{
+  height: 100%;
+  width: 20%;
+}
+.value{
+  font-size: 60px;
+}
+.container {
+  background-color: aqua;
+  text-align: left;
+  margin-top:2%;
+}
+.votes{
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+}
+.column{
+  text-align: center;
+  width:55%;
+  left:20%;
+}
+.voters >li {
+  display: inline-block;
+}
+.item{
+  padding-left: 100px;
+}
+
