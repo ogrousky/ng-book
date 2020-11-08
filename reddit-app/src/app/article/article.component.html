@@ -1,0 +1,40 @@
+<mat-card class="card">
+  <div class="container">
+    <div class="votes" style="background-color: lightgrey">
+      <div class="statistic">
+        <div class="value">
+          {{article.votes}}
+        </div>
+        <div class="label">
+          Points
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="column_container">
+        <div class="largeheader">
+          <a class="title" href="{{article.link}}">
+            {{article.title}}
+          </a>
+          <div class="meta">({{ article.domain() }})</div>
+        </div>
+      </div>
+      <ul class="voters">
+        <li class="item">
+          <fa-icon [icon]="faThumbsUp" class="icon"></fa-icon>
+          <a (click)="voteUp()" href>
+            <i class="arrow-up"></i>
+            J'aime
+          </a>
+        </li>
+        <li class="item">
+          <fa-icon [icon]="faThumbsDown" class="icon"></fa-icon>
+          <a (click)="voteDown()" href>
+            <i class="arrow-up"></i>
+            Je n'aime pas
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</mat-card>

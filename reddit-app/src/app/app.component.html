@@ -1,0 +1,28 @@
+<mat-toolbar>
+  <span>{{title}}</span>
+</mat-toolbar>
+<div class="layout">
+  <mat-card class="card">
+    <form class="ui large form segment">
+      <h3 class="ui header"> Ajouter un lien </h3>
+      <div class="inputs">
+        <div class="field">
+          <mat-form-field class="example-full-width">
+            <input #newtitle id="title" matInput name="title" placeholder="Titre">
+          </mat-form-field>
+        </div>
+        <div class="field">
+          <mat-form-field class="example-full-width">
+            <input #newlink id="link" matInput name="link" placeholder="Lien">
+          </mat-form-field>
+        </div>
+      </div>
+      <button (click)="addArticle(newtitle, newlink)" class="rightButton" color="primary" mat-raised-button>
+        Soumettre le lien
+      </button>
+    </form>
+  </mat-card>
+  <app-article *ngFor="let article of articles" [article]="article">
+  </app-article>
+
+</div>
