@@ -4,5 +4,30 @@
   height: 200px;
   border: 1px solid black;
   margin-top: 1%;
+}
 
+.content {
+  float: left;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.meta {
+  margin-top: 30px;
+}
+
+.description {
+  margin-top: 30px;
+}
+
+.header {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.price {
+  float: right;
+  margin-top: 80px;
+  font-size: 18px;
+  font-weight: bold;
 }
