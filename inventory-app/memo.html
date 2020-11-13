@@ -1,0 +1,58 @@
+<!-- ngIf -->
+The ngIf directive is used when you want to display or hide an element based on a
+condition. The condition is determined by the result of the expression that you pass
+into the directive.
+<div class="container">
+<div *ngIf="myVar == 'A'">Var is A</div>
+<div *ngIf="myVar == 'B'">Var is B</div>
+<div *ngIf="myVar != 'A' && myVar != 'B'">Var is something else</div>
+</div>
+<!-- ngSwitch-->
+Sometimes you need to render different elements depending on a given condition.
+<div class="container" [ngSwitch]="myVar">
+<div *ngSwitchCase="'A'">Var is A</div>
+<div *ngSwitchCase="'B'">Var is B</div>
+<div *ngSwitchCase="'C'">Var is C</div>
+<div *ngSwitchDefault>Var is something else</div>
+</div>
+<!-- ngStyle-->
+With the NgStyle directive, you can set a given DOM element CSS properties from
+Angular expressions.
+<div [style.background-color]="'yellow'">
+Uses fixed yellow background
+</div>
+
+<div [ngStyle]="{color: 'white', 'background-color': 'blue'}">
+Uses fixed white text on blue background
+</div>
+
+<!-- ngClass-->
+The NgClass directive, represented by a ngClass attribute in your HTML template,
+allows you to dynamically set and change the CSS classes for a given DOM element.
+<!--
+    .bordered {
+        border: 1px dashed black;
+        background-color: #eee; }
+    -->
+<div [ngClass]="{bordered: false}">This is never bordered</div>
+<div [ngClass]="{bordered: true}">This is always bordered</div>
+<div [ngClass]="{bordered: isBordered}">
+    Using object literal. Border {{ isBordered ? "ON" : "OFF" }}
+</div>
+<!-- be careful when you have class names that contains dashes,-->
+<div [ngClass]="{'bordered-box': false}">...</div>
+<!-- multiple classes- here 3 classes : base blue and round -->
+<div class="base" [ngClass]="['blue', 'round']">
+This will always have a blue background and
+round corners
+</div>
+
+<!-- ngFor-->
+The role of this directive is to repeat a given DOM element (or a collection of DOM
+elements) and pass an element of the array on each iteration.
+<div class="ui list" *ngFor="let c of cities">
+    <div class="item">{{ c }}</div>
+</div>
+
+
+

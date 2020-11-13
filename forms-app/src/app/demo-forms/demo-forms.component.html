@@ -1,0 +1,36 @@
+<div class="ui raised segment">
+  <h2 class="ui header">Demo Form: Sku</h2>
+  <!--  First we have #f="ngForm". The #v="thing" syntax says that we want to create a
+local variable for this view.-->
+  <form #f="ngForm" (ngSubmit)="onSubmit(f.value)" class="ui form">
+    <div class="field">
+      <label for="skuInput">SKU</label>
+      <input type="text" id="skuInput" placeholder="SKU" name="sku" ngModel />
+    </div>
+
+    <button type="submit" class="ui button">Submit</button>
+  </form>
+</div>
+
+<!--
+    Using FormBuilder
+    Building our FormControls and FormGroups implicitly using ngForm is convenient, but
+    doesn’t give us a lot of customization options. A more flexible and common way to
+    configure forms is to use a FormBuilder.
+ -->
+
+<h2 class="ui header">Demo Form: Sku with Builder</h2>
+<form [formGroup]="myForm" (ngSubmit)="onSubmitWithBuilder(myForm.value)">
+  <div>
+    <label for="skuInput">SKU</label>
+    <input
+      type="text"
+      id="skuInput"
+      placeholder="SKU"
+      [formControl]="myForm.controls['sku']"
+    />
+    <div *ngIf="!myForm.controls['sku'].valid" class="ui error message">SKU is invalid</div>
+    <div *ngIf="myForm.hasError('required','sku')" class="ui error message">SKU is required</div>
+  </div>
+  <button type="submit" class="ui button">Submit</button>
+</form>
