@@ -1,3 +1,9 @@
 .error {
     color: red
 }
+
+div,
+label,
+button {
+    margin: 10px;
+}
