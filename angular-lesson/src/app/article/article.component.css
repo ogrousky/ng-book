@@ -1,0 +1,33 @@
+.article {
+  margin: 20px 100px;
+  width: 500px;
+  height: 100px;
+}
+.element {
+  display: inline-flex;
+}
+.counter {
+  background-color: lightgray;
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+.counter {
+  display: block;
+  text-align: center;
+}
+#counter {
+  font-size: 30px;
+  margin: 20px;
+}
+.badge {
+  background-color: white;
+  outline: 2px black;
+  width: 400px;
+  height: 100px;
+}
+.badge * {
+  display: inline-block;
+}
+.votes {
+}
