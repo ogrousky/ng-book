@@ -1,17 +1,25 @@
-<div class="article" style="background-color: blueviolet">
-  <div class="counter element">
-    <label id="counter">10</label>
-    <label id="points">points</label>
+<div class="article">
+  <div class="counter">
+    <div id="counter">
+      <label>{{ article.votes }}</label>
+    </div>
+    <div id="points">
+      <label id="points">points</label>
+    </div>
   </div>
   <div class="badge element">
-    <p>Titre</p>
-    <div class="votes">
-      <div class="upvote">
-        <p>upvote</p>
-      </div>
-      <div class="downvote">
-        <p>downvote</p>
-      </div>
+    <div class="titre">
+      <p>{{ article.title }}</p>
     </div>
+    <ul class="votes">
+      <li class="upvote" (click)="voteUp()">
+        <i class="arrowUp fa fa-arrow-up"></i>
+        <label>UpVote</label>
+      </li>
+      <li class="downvote" (click)="voteDown()">
+        <i class="arrowDown fa fa-arrow-down"></i>
+        <label>DownVote</label>
+      </li>
+    </ul>
   </div>
 </div>

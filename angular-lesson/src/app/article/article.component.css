@@ -2,32 +2,75 @@
   margin: 20px 100px;
   width: 500px;
   height: 100px;
+  display: flex;
+  outline-style: solid;
+  outline-color: black;
+  outline-width: 0.5px;
 }
+
 .element {
-  display: inline-flex;
+  display: block;
 }
+
 .counter {
   background-color: lightgray;
   width: 100px;
   height: 100px;
-  float: left;
-}
-.counter {
   display: block;
   text-align: center;
 }
+
 #counter {
-  font-size: 30px;
-  margin: 20px;
+  font-size: 40px;
+
+  padding-top: 10px;
+
 }
+
 .badge {
   background-color: white;
   outline: 2px black;
   width: 400px;
   height: 100px;
+  padding-left: 50px;
 }
-.badge * {
-  display: inline-block;
-}
+
 .votes {
+  display: inline-flex;
+  margin: 0;
+  padding: 10px;
+}
+
+.titre {
+
+  font-size: 20px;
+  ;
+}
+
+.votes li {
+  list-style: none;
+}
+
+.votes li label {
+  padding: 0 30px 0 0;
+
+  cursor: pointer;
+}
+
+.upvote {
+  color: cadetblue;
+}
+
+.arrowDown {
+
+  margin-right: 10px;
+}
+
+.arrowUp {
+
+  margin-right: 10px;
+}
+
+.downvote {
+  color: cadetblue;
 }
