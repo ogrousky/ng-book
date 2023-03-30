@@ -1,0 +1,11 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+  <label>SKU</label>
+  <br />
+  <input
+    type="text"
+    id="skuInput"
+    placeholder="SKU"
+    [formControl]="form.controls['sku']"
+  />
+  <button type="submit">Submit</button>
+</form>
