@@ -1,15 +1,22 @@
-.article {
-  margin: 20px 100px;
-  width: 500px;
-  height: 100px;
-  display: flex;
+.selected {
+  outline-style: solid;
+  outline-color: dark;
+  outline-width: 3px;
+}
+.notselected {
   outline-style: solid;
   outline-color: darkgray;
   outline-width: 0.5px;
 }
 
-
-.article p {
+.product {
+  margin: 20px 100px;
+  width: 500px;
+  height: 100px;
+  display: flex;
+  cursor: pointer;
+}
+.product p {
   margin: 5px;
 }
 
@@ -28,12 +35,6 @@
   text-align: center;
 }
 
-#counter {
-  font-size: 40px;
-  padding-top: 10px;
-
-}
-
 .counter label {
   width: 100px;
   overflow: hidden;
@@ -50,7 +51,6 @@
   padding-left: 50px;
 }
 
-
 .titre {
   font-size: 20px;
 }
@@ -60,4 +60,10 @@
   padding-left: 0;
   margin-left: 0;
   width: 80px;
+}
+img {
+  margin: 0;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 }
