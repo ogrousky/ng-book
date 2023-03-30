@@ -1,0 +1,63 @@
+.article {
+  margin: 20px 100px;
+  width: 500px;
+  height: 100px;
+  display: flex;
+  outline-style: solid;
+  outline-color: darkgray;
+  outline-width: 0.5px;
+}
+
+
+.article p {
+  margin: 5px;
+}
+
+.badge {
+  padding: 8px;
+}
+
+.element {
+  display: block;
+}
+
+.counter {
+  width: 100px;
+  height: 100px;
+  display: block;
+  text-align: center;
+}
+
+#counter {
+  font-size: 40px;
+  padding-top: 10px;
+
+}
+
+.counter label {
+  width: 100px;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.badge {
+  background-color: white;
+  outline: 2px black;
+  width: 300px;
+  height: 100px;
+  padding-left: 50px;
+}
+
+
+.titre {
+  font-size: 20px;
+}
+
+.price {
+  padding-top: 35px;
+  padding-left: 0;
+  margin-left: 0;
+  width: 80px;
+}
